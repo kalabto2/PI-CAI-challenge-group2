@@ -1,2 +1,2 @@
-# PI-CAI-challenge-group22
-PI-CAI-challenge-group22 for ISMI course in Radboud University
+# PI-CAI-challenge-group2
+PI-CAI-challenge-group2 for ISMI course in Radboud University
