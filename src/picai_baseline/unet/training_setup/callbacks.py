@@ -210,7 +210,7 @@ def validate_model(model, optimizer, valid_gen, args, tracking_metrics, device, 
     os.makedirs(args.weights_dir, exist_ok=True)
 
     metrics_file = Path(args.weights_dir) / f"{args.model_type}_F{f}_metrics.xlsx"
-    metricsData.to_excel(metrics_file, encoding='utf-8', index=False)
+    metricsData.to_excel(metrics_file, index=False)
 
     writer.add_scalar("valid_auroc",   valid_metrics.auroc, epoch+1)
     writer.add_scalar("valid_ap",      valid_metrics.AP,    epoch+1)

@@ -129,6 +129,9 @@ def prepare_data(
 
         # note: modify preprocessing settings here
         mha2nnunet_settings["preprocessing"].update(preprocessing_kwargs)
+        mha2nnunet_settings["preprocessing"]["spacing"] = [3.0, 0.5, 0.5]
+        mha2nnunet_settings["preprocessing"]["matrix_size"] = [20, 256, 256]
+
 
         # save mha2nnunet_settings
         with open(mha2nnunet_settings_path, "w") as fp:
@@ -169,9 +172,9 @@ def prepare_data(
 if __name__ == "__main__":
     # parse command line arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument("--workdir", type=str, default=os.environ.get("workdir", "/workdir"),
+    parser.add_argument("--workdir", type=str, default=os.environ.get("workdir", "workdir"),
                         help="Path to the working directory (default: /workdir, or the environment variable 'workdir')")
-    parser.add_argument("--inputdir", type=str, default=os.environ.get("inputdir", "/input"),
+    parser.add_argument("--inputdir", type=str, default=os.environ.get("inputdir", "input"),
                         help="Path to the input dataset (default: /input, or the environment variable 'inputdir')")
     parser.add_argument("--imagesdir", type=str, default="images",
                         help="Path to the images, relative to --inputdir (default: /input/images)")
