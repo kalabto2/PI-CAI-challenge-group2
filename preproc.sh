@@ -9,5 +9,6 @@
 module load 2021
 module load Python/3.9.5-GCCcore-10.3.0
 #Execute program located in $HOME
-source $HOME/venv2/bin/activate
-python3 ../ceder/PI-CAI-challenge-group22/src/picai_baseline/prepare_data.py
+source $HOME/venv3/bin/activate
+
+python3 ../ohuvar/ISMI_PICAI_Team2_gc_algorithm/src/picai_baseline/prepare_data.py

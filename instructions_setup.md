@@ -12,7 +12,7 @@
 3) make splits
 
 ```bash
-python -m picai_baseline.splits.picai_nnunet --output "/workdir/splits/picai_nnunet"
+python -m picai_baseline.splits.picai_nnunet --output "./workdir/splits/picai_nnunet"
 ```
 
 4) run preprocessing (file `prepare_data.py` should already be adjusted as described in README.md [here](https://github.com/DIAGNijmegen/picai_baseline/blob/main/unet_baseline.md))
